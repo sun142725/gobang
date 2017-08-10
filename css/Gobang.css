@@ -1,0 +1,109 @@
+*{
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+header{
+    text-align: center;
+    height:50px;
+    line-height: 50px;
+    font-size: 48px;
+    font-weight:bold;
+    letter-spacing: 15px;
+}
+.concrols{
+    width:70px;
+    height:auto;
+    position:absolute;
+    left:0;
+    top:100px;
+    bottom:0;
+    right:700px;
+    margin:auto;
+}
+.concrols>button{
+    width:70px;
+    height:30px;
+    background: #80767b;
+    float:left;
+    outline: none;
+    /*border:none;*/
+    margin-top: 10px;
+}
+.checkb{
+    border:3px solid #000000;
+    position: absolute;
+    left:0;
+    top:30px;
+    right:0;
+    bottom:0;
+    margin:auto;
+    width:300px;
+    height:150px;
+    line-height: 100px;
+    text-align: center;
+    font-size: 48px;
+    z-index: 10;
+    background:gray;
+    /*display: none;*/
+    box-sizing: border-box;
+    border-radius:5px;
+}
+.checkb>div{
+    float:left;
+    font-size:24px;
+    line-height: 30px;
+    border-radius:5px;
+    background:orange;
+    margin-top:-10px;
+    margin-left: 32px;
+    width:100px;
+    text-align: center;
+    cursor: pointer;
+}
+.checkr>div{
+    float:left;
+    font-size:24px;
+    line-height: 30px;
+    border-radius:5px;
+    background:orange;
+    margin-top:-10px;
+    margin-left: 32px;
+    width:100px;
+    text-align: center;
+    cursor: pointer;
+}
+.undo1{
+    letter-spacing: 10px;
+}
+.undo2{
+    letter-spacing: 10px;
+}
+.checkr{
+    border:5px solid #000000;
+    position: absolute;
+    left:0;
+    top:30px;
+    right:0;
+    bottom:0;
+    margin:auto;
+    width:300px;
+    height:150px;
+    line-height: 100px;
+    text-align: center;
+    font-size: 48px;
+    z-index: 10;
+    background:red;
+    display: none;
+    box-sizing: border-box;
+    border-radius:15px;
+}
+canvas{
+    border:1px solid #000000;
+    position: absolute;
+    left:0;
+    top:30px;
+    right:0;
+    bottom:0;
+    margin:auto;
+}
