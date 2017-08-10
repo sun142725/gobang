@@ -23,28 +23,22 @@ window.onload=function(){
      };
      undo.onclick=function () {
          gobang.undo();
-         gobang.none();
      };
      end.onclick=function(){
          gobang.end();
-         gobang.none();
      };
      restart1.onclick=function(){
-         gobang.end();
-         gobang.start();
-         gobang.none();
+         gobang.restart()
      };
      undob.onclick=function(){
-         gobang.undo();
          gobang.none();
+         gobang.undo();
      };
     restart2.onclick=function(){
-        gobang.end();
-        gobang.start();
-        gobang.none();
+        gobang.restart()
     };
     undor.onclick=function(){
-        gobang.undo();
         gobang.none();
+        gobang.undo();
     }
 };

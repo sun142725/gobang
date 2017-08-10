@@ -14,6 +14,7 @@ function Gobang(obj,ctx,checkb,checkr){
 Gobang.prototype={
     init:function(){
         let self=this;
+        self.ctx.clearRect(0,0,600,600);
         for(let i=0;i<15;i++){
             self.ctx.moveTo(self.line(0),self.line(i));
             self.ctx.lineTo(self.line(14),self.line(i));
@@ -136,28 +137,27 @@ Gobang.prototype={
         let self=this;
         document.body.onkeydown=function(e){
             if(e.ctrlKey && e.keyCode==90){
-                if(self.history.length>0) {
-                    let last = self.history.pop();
-                    self.ctx.putImageData(last,0,0)
-                }else if(self.history.length==0){
-                    self.ctx.clearRect(0,0,600,600);
-                    self.init();
-                }
+                this.undo()
             }
         }
     },
     undo:function(){
         let self=this;
+        self.none();
         if(self.history.length>0) {
             let last = self.history.pop();
             self.ctx.putImageData(last,0,0)
         }else if(self.history.length==0){
-            self.ctx.clearRect(0,0,600,600);
             self.init();
         }
     },
     none:function(){
         this.checkb.style.display='none';
         this.checkr.style.display='none';
+    },
+    restart:function(){
+        this.none();
+        this.end();
+        this.start();
     }
 };
